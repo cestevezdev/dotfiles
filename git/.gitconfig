@@ -1,5 +1,5 @@
 [user]
-	name = cestevezdev
-	mail = cestevezdev@gmail.com
+        name = cestevezdev
+        email = cestevezdev@gmail.com
 [core]
-      sshCommand = ssh -i ~/.ssh/cestevezdev -F /dev/null
+        sshCommand = ssh -i ~/.ssh/cestevezdev -F /dev/null
