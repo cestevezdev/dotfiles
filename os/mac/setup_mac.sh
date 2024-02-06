@@ -1,42 +1,50 @@
 #! /usr/bin/env bash
 
-"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-# git config --global user.name "cestevezdev"
-# git config --global user.email cestevezdev@gmail.com
+echo "Installing OhMyZsh..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Interesting mac settings: https://gist.github.com/bradp/bea76b16d3325f5c47d4
 
-#"Enabling subpixel font rendering on non-Apple LCDs"
+echo "Enabling subpixel font rendering on non-Apple LCDs"
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-#"Showing all filename extensions in Finder by default"
+echo "Showing all filename extensions in Finder by default"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-#"Disabling the warning when changing a file extension"
+echo "Disabling the warning when changing a file extension"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-#"Use column view in all Finder windows by default"
-defaults write com.apple.finder FXPreferredViewStyle Clmv
+echo "Use list view in all Finder windows by default"
+defaults write com.apple.finder FXPreferredViewStyle Nlsv
 
-#"Avoiding the creation of .DS_Store files on network volumes"
+echo "Avoiding the creation of .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
-#"Setting the icon size of Dock items to 36 pixels for optimal size/screen-realestate"
+echo "Setting the icon size of Dock items to 36 pixels for optimal size/screen-realestate"
 defaults write com.apple.dock tilesize -int 36
 
-#"Setting Dock to auto-hide and removing the auto-hiding delay"
+echo "Setting Dock to auto-hide and removing the auto-hiding delay"
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
 
-#"Setting screenshots location to ~/Desktop"
-defaults write com.apple.screencapture location -string "$HOME/Desktop"
+echo "Setting screenshots location to ~/Pictures/Screenshots"
+mkdir -p "$HOME/Pictures/Screenshots"
+defaults write com.apple.screencapture location -string "$HOME/Pictures/Screenshots"
 
-#"Setting screenshot format to PNG"
+echo "Setting screenshot format to PNG"
 defaults write com.apple.screencapture type -string "png"
 
-#"Disable 'natural' (Lion-style) scrolling"
+echo "Disable 'natural' (Lion-style) scrolling"
+#defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+echo "Show path bar..."
+defaults write com.apple.finder ShowPathbar -bool true
+
+echo "Show status bar..."
+defaults write com.apple.finder ShowStatusBar -bool true
+
+echo "Disable natural scrolling..."
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
 
 killall Finder

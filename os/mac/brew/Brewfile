@@ -1,8 +1,8 @@
 tap "homebrew/bundle"
-tap "homebrew/cask"
+# tap "homebrew/cask" == It seems it is no longer neccesary
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
+# tap "homebrew/core" == It seems it is no longer neccesary
 tap "homebrew/services"
 tap "buo/cask-upgrade"
 tap "hashicorp/tap"
@@ -36,7 +36,6 @@ brew "vim"
 brew "watch"
 brew "wget"
 
-cask "1password"
 cask 'dropbox'
 cask 'evernote'
 cask "font-jetbrains-mono"
@@ -49,3 +48,5 @@ cask "synology-drive"
 cask "visual-studio-code"
 
 mas "The Unarchiver", id: 425424353
+mas "Microsoft 365", id: 1450038993
+#mas "TechSmith Snagit 2024", id: 6451154048
