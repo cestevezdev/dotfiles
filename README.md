@@ -10,6 +10,10 @@ Install git. We will use it for clonning the dotfiles repo:
 
 `% brew install git`
 
+Install 1password. It's my personal store for ssh keys:
+
+`% brew install --cask 1password`
+
 Configure git/SSH for accessing github:
 
 `% git config --global user.name "cestevezdev"`
