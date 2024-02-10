@@ -69,6 +69,12 @@ export POETRY_CONFIG_DIR="$HOME/.config/pypoetry"
 ```
 `% poetry config virtualenvs.in-project true`
 
+# Quick guide for setting up a new linux
+TBW
+
+# Quick guide for setting up a new windows
+TBW
+
 
 # Annex A: SSH key management
 
