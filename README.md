@@ -82,7 +82,7 @@ TBW
 Simple explanation about ssh keys: [SSH keys, Rob Edwards](https://www.youtube.com/watch?v=dPAw4opzN9g).
 
 ## Generate a key pair (public+private) of your client machine
-This keys could be used later for authenticating with any service based on ssh protocol (e.g. clonning repos from github via ssh)
+These keys could be used later for authenticating with any service based on ssh protocol (e.g. clonning repos from github via ssh)
 
 `% ssh-keygen -t rsa -m PEM -f <client_host>.pem`
 `% ssh-keygen -t rsa -b 4096 -m PEM -C "<your_email>" -f ~/.ssh/<identity_name>`
