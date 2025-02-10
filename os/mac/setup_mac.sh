@@ -14,9 +14,6 @@ defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 echo "Disabling the warning when changing a file extension"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
-echo "Use list view in all Finder windows by default"
-defaults write com.apple.finder FXPreferredViewStyle Nlsv
-
 echo "Avoiding the creation of .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
@@ -46,6 +43,30 @@ defaults write com.apple.finder ShowStatusBar -bool true
 
 echo "Disable natural scrolling..."
 defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+echo "TODO: Finder - Show Library folder..."
+#defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+echo "TODO: Finder - Calculate folder..."
+#defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+echo "TODO: Finder - Text size 14..."
+#defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+echo "TODO: Finder - New Finder opens in Documents..."
+#defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+echo "TODO: Finder - New Finder opens in Documents..."
+#defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+echo "TODO: Finder - Show <username> in sidebar..."
+#defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+echo "TODO: Finder - Remove tags from sidebar..."
+#defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
+
+echo "Finder - Use list view in all Finder windows by default"
+defaults write com.apple.finder FXPreferredViewStyle Nlsv
 
 killall Finder
 

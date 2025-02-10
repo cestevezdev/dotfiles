@@ -30,19 +30,20 @@ Do not forget set the appropriate premissions for the public key:
 And edit .gitconfig file for specifying the private key that will be used for authentication. After editing for adding the ssh command used for auth, the .gitconfig file should be like:
 ```
 [user]
-	name = cestevezdev
+	name = Carlos
 	email = cestevezdev@gmail.com
 [core]
 	sshCommand = ssh -i ~/.ssh/cestevezdev -F /dev/null
 ```
 
-Know you can clone dotfiles. Do it wherever you want. I prefer to do it in ~/Projects/cestevezdev:
+Now you can clone dotfiles. Do it wherever you want. I use to clone my repos ~/projects, and then, a subfolder per github identity.
 
 `% git clone git@github.com:cestevezdev/dotfiles.git`
 
 Now you can setup mac basic apps and settings:
 
 `% cd ~/Projects/cestevezdev/dotfiles/os/mac`
+
 `% ./setup_mac.sh`
 
 Deploy all software:
@@ -84,6 +85,7 @@ Simple explanation about ssh keys: [SSH keys, Rob Edwards](https://www.youtube.c
 This keys could be used later for authenticating with any service based on ssh protocol (e.g. clonning repos from github via ssh)
 
 `% ssh-keygen -t rsa -m PEM -f <client_host>.pem`
+`% ssh-keygen -t rsa -b 4096 -m PEM -C "<your_email>" -f ~/.ssh/<identity_name>`
 
 This command generates a pair or files:
 
@@ -91,7 +93,13 @@ Remember to keep your private key always safe!
 
 Exchange only the public key (see sharing pub key below)
 
-## Sharing the pub with the server you want to access:
+## Store key in ssh agent:
+`eval "$(ssh-agent -s)" && \
+`ssh-add --apple-use-keychain ~/.ssh/<identity_name>
 
+## Sharing the pub with the server you want to access:
 `ssh-copy-id -i <client_host>.pem.pub <server_username>@<server_host>`
 
+## Sharing the pub key with github:
+
+## Sharing the pub key with gitlab:

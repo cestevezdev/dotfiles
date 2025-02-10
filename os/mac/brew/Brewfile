@@ -12,6 +12,7 @@ brew "awscli"
 brew "curl"
 brew "cdktf"
 brew "docker"
+brew "denisidoro/tools/docpars"
 brew "docker-buildx"
 brew "docker-compose"
 brew "gh"
@@ -19,6 +20,7 @@ brew "git"
 brew "git-delta"
 brew "git-lfs"
 brew "hashicorp/tap/terraform"
+brew "hstr"
 brew "htop"
 brew "ijq"
 brew "jq"
@@ -28,14 +30,20 @@ brew "maven"
 brew "node"
 brew "nvm"
 brew "openjdk@11"
+brew "openjdk@17"
+brew "openjdk@22"
+brew "pandoc"
 brew "poetry"
 brew "pre-commit"
+brew "protobuf"
 brew "python@3.12"
 brew "telnet"
 brew "vim"
 brew "watch"
 brew "wget"
 
+cask "appcleaner"
+cask "alt-tab"
 cask 'dropbox'
 cask 'evernote'
 cask "font-commit-mono"
@@ -44,9 +52,11 @@ cask "font-jetbrains-mono"
 cask "google-chrome"
 cask "iterm2"
 cask "notion"
+#cask "openvpn-connect"
 cask "synology-drive"
 cask "visual-studio-code"
 
 mas "The Unarchiver", id: 425424353
-mas "Microsoft 365", id: 1450038993
-#mas "TechSmith Snagit 2024", id: 6451154048
+mas "HEIC Converter", id: 1294126402
+# mas "Microsoft 365", id: 1450038993
+##mas "TechSmith Snagit 2024", id: 6451154048
